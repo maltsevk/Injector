@@ -41,7 +41,9 @@ int initialize()
 		}
 	}
 	catch (std::string error) {
+#ifdef _DEBUG
 		Debug::log(std::move(error));
+#endif
 		return -1;
 	}
 
